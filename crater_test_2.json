@@ -1,0 +1,46 @@
+{
+	"populate": {
+        "crater_1": {
+			"enabled": true,
+			"distribution": "custom",
+			"generator": {
+				"type": "plate",
+				"block": "minecraft:glass",
+				"radius": 3,
+				"height": 0,
+				"slim": false,
+				"material": [
+					"minecraft:air",
+					"minecraft:dirt",
+					"minecraft:stone",
+					"minecraft:grass",
+					"minecraft:gravel",
+					"minecraft:sand",
+					"minecraft:snow",
+					"minecraft:snow_layer"
+				]
+			},
+			"cluster-count": 1,
+			"chunk-chance": 3,
+			"follow-terrain": false,
+			"retrogen": false,
+			"x-offset": 0,
+			"y-offset": {
+				"value-a": 1,
+				"value-b": {
+					"world-data": "lowest_chunk_horizon"
+				},
+				"operation": "subtract"
+			},
+			"z-offset": 0,
+			"retrogen": false,
+			"biome": "all",
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		}
+	}
+}
