@@ -448,7 +448,6 @@
 				]
 			},
 			"retrogen": false,
-			"enabled": false,
 			"dimension": {
 				"restriction": "whitelist",
 				"value": [
