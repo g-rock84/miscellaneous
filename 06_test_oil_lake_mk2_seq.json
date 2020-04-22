@@ -1,0 +1,460 @@
+{
+	"dependencies": "thermalfoundation",
+	"populate": {
+		"oil_lake": {
+			"distribution": "sequential",
+				"chunk-chance": 150,
+				"features": [
+					{
+						"distribution": "surface",
+						"generator": {
+							"type": "lake",
+							"block": "thermalfoundation:fluid_crude_oil",
+							"material": [
+								"minecraft:sand",
+								"minecraft:air",
+								"minecraft:sandstone",
+								"minecraft:stone",
+								"minecraft:water",
+								"minecraft:dirt",
+								"minecraft:clay",
+								"minecraft:lava",
+								"thermalfoundation:fluid_crude_oil",
+								"minecraft:iron_ore",
+								"minecraft:coal_ore",
+								{
+									"name": "thermalfoundation:ore_fluid",
+									"properties": {
+										"type": "crude_oil_sand"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "copper"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "tin"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "silver"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "lead"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "nickel"
+									}
+								}
+							],
+							"use-material": true,
+							"outline-block": {
+								"name": "thermalfoundation:ore_fluid",
+									"properties": {
+										"type": "crude_oil_sand"
+									}
+							},
+						},
+						"cluster-count": 1,
+						"follow-terrain": true
+					},
+					{
+						"distribution": "custom",
+						"x-offset": {
+							"value-a": {
+								"value-a": {
+									"value-a": 16,
+									"value-b": {
+										"value-a": {
+											"value-a": {
+												"value-a": {
+													"world-data": "current_x"
+												},
+												"value-b": -1,
+												"operation": "MAXIMUM"
+											},
+											"value-b": {
+												"value-a": {
+													"world-data": "current_x"
+												},
+												"value-b": 1,
+												"operation": "MINIMUM"
+											},
+											"operation": "MULTIPLY"
+										},
+										"value-b": 16,
+										"operation": "MODULO"
+									},
+									"operation": "SUBTRACT"
+								},
+								"value-b": {
+									"value-a": {
+										"value-a": 16,
+										"value-b": {
+											"value-a": {
+												"value-a": {
+													"value-a": {
+														"world-data": "current_x"
+													},
+													"value-b": -1,
+													"operation": "MAXIMUM"
+												},
+												"value-b": {
+													"value-a": {
+														"world-data": "current_x"
+													},
+													"value-b": 1,
+													"operation": "MINIMUM"
+												},
+												"operation": "MULTIPLY"
+											},
+											"value-b": 16,
+											"operation": "MODULO"
+										},
+										"operation": "SUBTRACT"
+									},
+									"value-b": 1,
+									"operation": "MODULO"
+								},
+								"operation": "SUBTRACT"
+							},
+							"value-b": 7,
+							"operation": "SUBTRACT"
+						},
+						"y-offset": {
+							"value-a": {
+								"world-data": "lowest_chunk_horizon"
+							},
+							"value-b": 9,
+							"operation": "SUBTRACT"
+						},
+						"z-offset": {
+							"value-a": {
+								"value-a": {
+									"value-a": 16,
+									"value-b": {
+										"value-a": {
+											"value-a": {
+												"value-a": {
+													"world-data": "current_z"
+												},
+												"value-b": -1,
+												"operation": "MAXIMUM"
+											},
+											"value-b": {
+												"value-a": {
+													"world-data": "current_z"
+												},
+												"value-b": 1,
+												"operation": "MINIMUM"
+											},
+											"operation": "MULTIPLY"
+										},
+										"value-b": 16,
+										"operation": "MODULO"
+									},
+									"operation": "SUBTRACT"
+								},
+								"value-b": {
+									"value-a": {
+										"value-a": 16,
+										"value-b": {
+											"value-a": {
+												"value-a": {
+													"value-a": {
+														"world-data": "current_z"
+													},
+													"value-b": -1,
+													"operation": "MAXIMUM"
+												},
+												"value-b": {
+													"value-a": {
+														"world-data": "current_z"
+													},
+													"value-b": 1,
+													"operation": "MINIMUM"
+												},
+												"operation": "MULTIPLY"
+											},
+											"value-b": 16,
+											"operation": "MODULO"
+										},
+										"operation": "SUBTRACT"
+									},
+									"value-b": 1,
+									"operation": "MODULO"
+								},
+								"operation": "SUBTRACT"
+							},
+							"value-b": 7,
+							"operation": "SUBTRACT"
+						},
+						"generator": {
+							"type": "spout",
+							"block": "thermalfoundation:fluid_crude_oil",
+							"material": [
+								"minecraft:air",
+								"minecraft:sand",
+								"minecraft:sandstone",
+								"minecraft:stone",
+								"minecraft:water",
+								"minecraft:dirt",
+								"minecraft:clay",
+								"minecraft:iron_ore",
+								"minecraft:coal_ore",
+								"thermalfoundation:fluid_crude_oil",
+								{
+									"name": "thermalfoundation:ore_fluid",
+									"properties": {
+										"type": "crude_oil_sand"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "copper"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "tin"
+									}
+								}
+							],
+							"height": {
+								"value-a": {
+									"min": 0, 
+									"max": 15
+								},
+								"value-b": 9,
+								"operation": "ADD"
+							},
+							"radius": 0,
+						},
+						"cluster-count": 1,
+					},
+					{
+						"distribution": "custom",
+						"x-offset": {
+							"value-a": {
+								"value-a": {
+									"value-a": 16,
+									"value-b": {
+										"value-a": {
+											"value-a": {
+												"value-a": {
+													"world-data": "current_x"
+												},
+												"value-b": -1,
+												"operation": "MAXIMUM"
+											},
+											"value-b": {
+												"value-a": {
+													"world-data": "current_x"
+												},
+												"value-b": 1,
+												"operation": "MINIMUM"
+											},
+											"operation": "MULTIPLY"
+										},
+										"value-b": 16,
+										"operation": "MODULO"
+									},
+									"operation": "SUBTRACT"
+								},
+								"value-b": {
+									"value-a": {
+										"value-a": 16,
+										"value-b": {
+											"value-a": {
+												"value-a": {
+													"value-a": {
+														"world-data": "current_x"
+													},
+													"value-b": -1,
+													"operation": "MAXIMUM"
+												},
+												"value-b": {
+													"value-a": {
+														"world-data": "current_x"
+													},
+													"value-b": 1,
+													"operation": "MINIMUM"
+												},
+												"operation": "MULTIPLY"
+											},
+											"value-b": 16,
+											"operation": "MODULO"
+										},
+										"operation": "SUBTRACT"
+									},
+									"value-b": 1,
+									"operation": "MODULO"
+								},
+								"operation": "SUBTRACT"
+							},
+							"value-b": 7,
+							"operation": "SUBTRACT"
+						},
+						"y-offset": {
+							"value-a": {
+								"world-data": "lowest_chunk_horizon"
+							},
+							"value-b": 10,
+							"operation": "SUBTRACT"
+						},
+						"z-offset": {
+							"value-a": {
+								"value-a": {
+									"value-a": 16,
+									"value-b": {
+										"value-a": {
+											"value-a": {
+												"value-a": {
+													"world-data": "current_z"
+												},
+												"value-b": -1,
+												"operation": "MAXIMUM"
+											},
+											"value-b": {
+												"value-a": {
+													"world-data": "current_z"
+												},
+												"value-b": 1,
+												"operation": "MINIMUM"
+											},
+											"operation": "MULTIPLY"
+										},
+										"value-b": 16,
+										"operation": "MODULO"
+									},
+									"operation": "SUBTRACT"
+								},
+								"value-b": {
+									"value-a": {
+										"value-a": 16,
+										"value-b": {
+											"value-a": {
+												"value-a": {
+													"value-a": {
+														"world-data": "current_z"
+													},
+													"value-b": -1,
+													"operation": "MAXIMUM"
+												},
+												"value-b": {
+													"value-a": {
+														"world-data": "current_z"
+													},
+													"value-b": 1,
+													"operation": "MINIMUM"
+												},
+												"operation": "MULTIPLY"
+											},
+											"value-b": 16,
+											"operation": "MODULO"
+										},
+										"operation": "SUBTRACT"
+									},
+									"value-b": 1,
+									"operation": "MODULO"
+								},
+								"operation": "SUBTRACT"
+							},
+							"value-b": 7,
+							"operation": "SUBTRACT"
+						},
+						"generator": {
+							"type": "plate",
+							"block": "thermalfoundation:fluid_crude_oil",
+							"material": [
+								"minecraft:sand",
+								"minecraft:sandstone",
+								"minecraft:stone",
+								"minecraft:water",
+								"minecraft:dirt",
+								"minecraft:clay",
+								"minecraft:lava",
+								"minecraft:air",
+								"thermalfoundation:fluid_crude_oil",
+								"minecraft:iron_ore",
+								"minecraft:coal_ore",
+								{
+									"name": "thermalfoundation:ore_fluid",
+									"properties": {
+										"type": "crude_oil_sand"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "copper"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "tin"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "silver"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "lead"
+									}
+								},
+								{
+									"name": "thermalfoundation:ore",
+									"properties": {
+										"type": "nickel"
+									}
+								}
+							],
+							"height": {
+								"min": 1, 
+								"max": 3
+							},
+							"radius": 14
+						},
+						"cluster-count": 1,
+					},
+				],
+			"biome": {
+				"restriction": "whitelist",
+				"value": [
+					{
+						"type": "dictionary",
+						"entry": "SANDY"
+					},
+				]
+			},
+			"retrogen": false,
+			"enabled": false,
+			"dimension": {
+				"restriction": "whitelist",
+				"value": [
+					0
+				]
+			}
+		}
+	}
+}
