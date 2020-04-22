@@ -135,7 +135,7 @@
 						},
 						"y-offset": {
 							"value-a": {
-								"world-data": "lowest_chunk_horizon"
+								"world-data": "current_y"
 							},
 							"value-b": 9,
 							"operation": "SUBTRACT"
@@ -311,7 +311,7 @@
 						},
 						"y-offset": {
 							"value-a": {
-								"world-data": "lowest_chunk_horizon"
+								"world-data": "current_y"
 							},
 							"value-b": 10,
 							"operation": "SUBTRACT"
